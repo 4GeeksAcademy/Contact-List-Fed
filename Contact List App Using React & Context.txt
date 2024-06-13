@@ -1,0 +1,18 @@
+create one component called <Layout /> which will take care of routing the users to the specific views they should see, depending on each of the particular URLs
+.
+similar to this:
+export const Layout = () => {
+    return (
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route element={<Home />} path="/" />
+                    <Route element={<Demo />} path="/demo" />
+                    <Route element={<Single />} path="/single/:theid" />
+                    <Route element={<h1>Not found!</h1>} />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
+}
+.
